@@ -5,7 +5,6 @@
         <div id="bomdia">
           {{ saudacao.texto }}
         </div>
-        <div id="local">Local</div>
         <div id="hora">
           {{ hora }}
         </div>
@@ -27,8 +26,10 @@ export default {
   data: () => ({
     semana: moment().format('dddd'),
     dia: moment().format('DD/MM'),
-    hora: moment().format('HH:mm'),
-    h: moment().add(4, 'hours').format('H')
+    hora: '00:30',
+    //hora: moment().format('HH:mm'),
+    //mude  .add(aqui) para testar 
+    h: moment().add(0, 'hours').format('H')
   }),
   computed: {
     saudacao() {
@@ -37,12 +38,13 @@ export default {
         case valor >= 0 && valor <= 5:
           return {
             texto: 'Boa Madrugada',
-            class: 'madrugada'
+            class: 'madrugada',
           }
         case valor < 12:
           return {
             texto: 'Bom Dia',
-            class: 'dia'
+            class: 'dia',
+            fundo: 'back'
           }
         case valor < 17:
           return {
@@ -59,10 +61,19 @@ export default {
         default:
           return {
             texto: 'Boa Noite',
-            class: 'noite'
+            class: 'noite',
+            fundo: 'back'
           }
       }
     }
+  },
+  methods:{
+    gethora(){
+      this.hora = moment().format('HH:mm:ss')
+    }
+  },
+  mounted(){
+    setInterval(this.gethora, 1000)
   }
 }
 </script>
@@ -96,9 +107,6 @@ body {
   font-weight: bold;
   font-size: 55px;
 }
-#local {
-  text-align: center;
-}
 #hora {
   text-align: center;
   font-size: 60px;
@@ -117,7 +125,6 @@ body {
 }
 .dia {
   background-image: url(./assets/1.jpg);
-  color: rgb(0, 8, 5);
 }
 .tarde {
   background-image: url(./assets/2.jpg);
