@@ -27,7 +27,6 @@ export default {
     semana: moment().format('dddd'),
     dia: moment().format('DD/MM'),
     hora: '00:30',
-    //hora: moment().format('HH:mm'),
     //mude  .add(aqui) para testar 
     h: moment().add(0, 'hours').format('H')
   }),
