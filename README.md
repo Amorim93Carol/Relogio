@@ -8,7 +8,8 @@ Boa Tarde 2 (17/19)  ![image](https://user-images.githubusercontent.com/80857935
 
 Boa Noite (19/00) ![image](https://user-images.githubusercontent.com/80857935/119238746-757f1400-bb12-11eb-9373-cf0b66cc71f7.png)
 
-Boa Madrugada (00/05) ![image](https://user-images.githubusercontent.com/80857935/119235772-1dd8ac80-bb02-11eb-9cc8-eb586217267e.png)
+Boa Madrugada (00/05)  ![image](https://user-images.githubusercontent.com/80857935/119765383-2a9e2d00-be81-11eb-9a97-7d6d7f21467f.png)
+
 
 ## Configuração do projeto
 
